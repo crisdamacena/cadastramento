@@ -6,7 +6,7 @@ class MensagemView extends View{
     }
 
     _template(model) {
-        return model.texto ? `<p class="alert alert-success">${model.texto}</p>` : `<p></p>`;
+        return model.texto ? `<p class="alert alert-warning">${model.texto}</p>` : `<p></p>`;
   }
     
 }

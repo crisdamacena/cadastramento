@@ -22,10 +22,18 @@ class NegociacaoController {
         this._listaNegociacoes.adiciona(this._criaNegociacao());
         this._negociacoesView.update(this._listaNegociacoes);
     
-        this._mensagem.texto = 'Negociacao adicionada com sucesso';
+        this._mensagem.texto = 'Negocição adicionada com sucesso';
         this._mensagemView.update(this._mensagem);  
     
         this._limpaFormulario();
+    }
+
+    apaga(){
+        this._listaNegociacoes.esvazia();
+        this._negociacoesView.update(this._listaNegociacoes);
+
+        this._mensagem.texto = 'Negociação apagada';
+        this._mensagemView.update(this._mensagem);  
     }
 
     //Os métodos auxiliares são métodos precedidos de "_" que são usados e acessados somente dentro da classe
