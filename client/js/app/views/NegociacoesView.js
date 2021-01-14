@@ -1,10 +1,11 @@
-class NegociacoesView{
+class NegociacoesView extends View{
 
+    //Por padrão, quando uma classe herda outra, ela também herda seu construtor. A escrita do construtor é opcional CASO NENHUMA OUTRA DEPENDA DELA AQUI
     constructor(elemento){
-        this._elemento = elemento;
+        super(elemento);//Ao declarar o super, há uma chamada para a classe pai. Classe de onde foram herdados os elementos.
     }
 
-    _template(model){
+    _template(model){ //O método template tem o HTML que será inserido (chamado) na parte visual da aplicação
 
         return `
         <table class="table table-hover table-bordered">
@@ -45,11 +46,6 @@ class NegociacoesView{
     </tfoot>
         </table>
         `;
-    }
-
-    update(model){
-
-        this._elemento.innerHTML = this._template(model);
     }
 
 }
